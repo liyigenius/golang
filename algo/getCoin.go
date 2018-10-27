@@ -31,6 +31,7 @@ func getCoinN(i int) int {
 
 func main() {
 	id := flag.Int("id", 0, "id")
+	flag.Parse()
 
 	for i := 1; i < *id; i++ {
 		fmt.Println(i, getCoinN(i))
