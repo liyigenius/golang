@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"flag"
+	"fmt"
+)
 
 func getMin(l []int) int {
 	min := 0
@@ -27,7 +30,9 @@ func getCoinN(i int) int {
 }
 
 func main() {
-	for i := 1; i < 26; i++ {
+	id := flag.Int("id", 0, "id")
+
+	for i := 1; i < *id; i++ {
 		fmt.Println(i, getCoinN(i))
 	}
 }
